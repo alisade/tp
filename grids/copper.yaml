@@ -1,0 +1,4 @@
+ninjas:
+  cassandra_dc: us-east
+  env:
+    CP_CASSANDRA_DC: us-east

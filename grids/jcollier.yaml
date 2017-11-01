@@ -1,0 +1,25 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    badams@cloudpassage.com:
+    akeller@cloudpassage.com:
+    zvickery@cloudpassage.com:
+    jcollier@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+    qa-ec2-smoke: 52.8.8.179
+    qa-ec2-docker: 54.241.27.184
+    aramamoorthy@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    drajangam@cloudpassage.com:
+    jcordova@cloudpassage.com:
+    sramanathan@cloudpassage.com:
+    vmanda:
+
+ninjas:
+  kafka:
+    topic:
+      # Values must be valid JSON or it will not work!
+      defaults:     '{ "partitions": 64, "config":[ "segment.bytes=5000000" ], "replication-factor": 3 }'
+      issues_index: '{ "partitions": 64, "config":[ "segment.bytes=5000000" ], "replication-factor": 3 }'

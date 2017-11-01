@@ -1,0 +1,61 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    aadriasola@cloudpassage.com:
+    akeller@cloudpassage.com:
+    alim@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+    jcollier@cloudpassage.com:
+    zvickery@cloudpassage.com:
+    nkrishnan@cloudpassage.com:
+    npuffer@cloudpassage.com:
+    talpert@cloudpassage.com: 71.209.192.41
+    ebeuerlein@cloudpassage.com:
+terraform_overrides:
+  dnsdomain: c1oudpassage.com
+  STATEBUCKET: tla-sdi-dev-us-east-1-38535
+  AWS_DEFAULT_REGION: us-east-1
+  TF_VAR_environment: development
+  TF_VAR_aws_account: 385356239175
+  TF_VAR_acct_prefix: 38535
+  TF_VAR_ssh_public_key: '${SSH_KEY}'
+  TF_VAR_halo_daemon_key: NA
+  TF_VAR_dd_apikey: NA
+  TF_VAR_aws_access_key: ${AWS_ACCESS_KEY_ID}
+  TF_VAR_aws_region: ${AWS_DEFAULT_REGION}
+  TF_VAR_aws_secret_key: ${AWS_SECRET_ACCESS_KEY}
+  TF_VAR_r53_domain: c1oudpassage.com
+  TF_VAR_r53_zone_id: ZI1NAE63CHKBL
+  TF_VAR_domain_cert: '*.c1oudpassage.com'
+  TF_VAR_emr_enable: false
+  TF_VAR_cass_count: '{ us-east-1a=1, us-east-1b=1, us-east-1c=1 }'
+  TF_VAR_elasticsearch_count: '{ us-east-1a=1, us-east-1b=1, us-east-1c=1 }'
+  TF_VAR_elasticsearch_master_count: '{ us-east-1a=1, us-east-1b=1, us-east-1c=1 }'
+  TF_VAR_elasticsearch5x_count: '{ us-east-1a=0, us-east-1b=0, us-east-1c=0 }'
+  TF_VAR_elasticsearch5x_master_count: '{ us-east-1a=0, us-east-1b=0, us-east-1c=0 }'
+  TF_VAR_master_count: '{ us-east-1a=1, us-east-1b=1, us-east-1c=1 }'
+  TF_VAR_worker_slave_count: '{ us-east-1a=5, us-east-1b=5, us-east-1c=5 }'
+  TF_VAR_slave_count: '{ us-east-1a=5, us-east-1b=5, us-east-1c=5 }'
+  TF_VAR_public_slave_count: '{ us-east-1a=1, us-east-1b=1, us-east-1c=1 }'
+  TF_VAR_kafka_count: '{us-east-1a=1, us-east-1b=1, us-east-1c=1 }'
+  TF_VAR_zookeeper_count: '{us-east-1a=1, us-east-1b=1, us-east-1c=1 }'
+  TF_VAR_public_slave_total: 3
+  TF_VAR_rdskong: '{ multi_az=false, allocated_storage="20", storage_type="gp2", apply_immediately=true, instance_type="db.m4.large" }'
+  TF_VAR_rdsreporting: '{ multi_az=false, allocated_storage="100", storage_type="gp2", apply_immediately=true, instance_type="db.m4.large" }'
+  TF_VAR_rdsmetabase: '{ multi_az=false, allocated_storage="20", storage_type="gp2", apply_immediately=true, instance_type="db.m4.large" }'
+  TF_VAR_spot_pricing: '{ m3.medium="", m3.large="", m3.xlarge="", m3.2xlarge="", c3.large="", c3.xlarge="", c3.2xlarge="", c3.4xlarge="", c3.8xlarge="", r3.large="", r3.xlarge="", r3.2xlarge="", r3.4xlarge="", r3.8xlarge="", i2.xlarge="", i2.2xlarge="",  i2.4xlarge="", i2.8xlarge="", d2.xlarge="", d2.2xlarge="", d2.4xlarge="", d2.8xlarge="" }'
+  TF_VAR_kafka_instance_type: m3.large
+  TF_VAR_cassandra_instance_type: m3.large
+  TF_VAR_elasticsearch_instance_type: r3.large
+  #TF_VAR_elasticsearch_master_instance_type: m3.large
+  #TF_VAR_master_instance_type: m4.xlarge
+  #TF_VAR_slave_instance_type: m3.xlarge
+  #TF_VAR_worker_slave_instance_type: m3.xlarge
+  #TF_VAR_public_slave_instance_type: r3.large
+ninjas:
+  cassandra_dc: us-east
+  env:
+    CP_CASSANDRA_DC: us-east

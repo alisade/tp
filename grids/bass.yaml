@@ -1,0 +1,193 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    akeller@cloudpassage.com: 76.89.164.115
+    zvickery@cloudpassage.com: 159.118.218.84
+    jcollier@cloudpassage.com: 173.92.26.196
+    trobbins@cloudpassage.com: 67.169.108.148
+    aardestani@cloudpassage.com: 47.156.157.5
+    alim@cloudpassage.com: 100.33.9.172
+    talpert@cloudpassage.com: 34.208.62.171
+    aadriasola@cloudpassage.com: 69.42.13.203
+    vitaliy@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+    dzmitrachonak@cloudpassage.com: 45.62.123.18
+    vmalyshka@cloudpassage.com: 86.57.236.190
+    amansoor@cloudpassage.com:
+    vaher@cloudpassage.com:
+    tcummings@cloudpassage.com:
+    kuga@cloudpassage.com:
+    dangal@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    kjanakiraman@cloudpassage.com:
+    jcordova@cloudpassage.com:
+    vmanda@cloudpassage.com:
+    spyatrovich@cloudpassage.com:
+    abarkouski@cloudpassage.com:
+    mshiriyazdanov@cloudpassage.com:
+    abuhayeu@cloudpassage.com:
+
+kong:
+  REPORTING_API_EXTERNAL_WHITELIST: '10.0.0.0/8'
+
+kafka-connect:
+  worker_count: 0
+  cpus: 4
+  mem: 4096
+  DEFAULT_TASKS_MAX: 2
+
+
+3rdparty:
+  new_relic_license_key: dc7d9326185261dc8f38bdbd11db15749dc9427b
+  datadog_api_key: 6d3fccd2292fa567e2e335dbf09a3caa
+  airbrake_project_key: 055148e4e121d2db5a858f2aa994b92f
+  airbrake_project_id: 98931
+
+ninjas:
+  repo_url: https://bass.packages.cloudpassage.com
+  cassandra_keyspace: cloudpassage_bass
+  env:
+    CP_POSTGRES_HOST: pgbouncer.marathon.mesos
+    API_CPUS: 1.0
+    API_MEM: 3072
+    PORTAL_CPUS: 1.0
+    PORTAL_MEM: 3072
+    GRID_CPUS: 1.0
+    GRID_MEM: 2048
+    WORKER_DEFAULT_CPUS: 1.0
+    WORKER_FIM_MEM: 4096
+    WORKER_MAIL_DIGEST_ALERTS_MEM: 1024
+    WORKER_MAIL_INSTANT_ALERTS_MEM: 2048
+    WORKER_SVA2_MEM: 1024
+    WORKER_SVA22_MEM: 2048
+    WORKER_USER_REQUESTS_SVA2_MEM: 1024
+    WORKER_USER_REQUESTS_SVA22_MEM: 1024
+    DAEMONS_CHECK_MISSING_ENABLE: true
+    DAEMONS_CHECK_SHUTDOWN_ENABLE: true
+    DAEMONS_CHECK_DEACTIVATED_ENABLE: true
+    DAEMONS_RETIRE_SERVERS_ENABLE: true
+    CP_MAILER_ASSET_HOST: https://portal.bass.cloudpassage.com
+    CP_S3_AWS_FUGU_BUCKET: ng-fugu-blue
+    CP_FUGU_HOST: https://fugu-blue.cloudpassage.com
+    CP_CASSANDRA_KEYSPACE: cloudpassage_bass
+    CP_MIGRATION_GRID_URL: grid.bass.cloudpassage.com
+    CP_GRID_IPS: grid.bass.cloudpassage.com
+    CP_ZUORA_SERVER: https://www.zuora.com/apps/services/a/71.0
+    CP_ZUORA_PRODUCTION_PLANS: 1
+    CP_REPO_URL: https://bass.packages.cloudpassage.com
+    CP_CONNECTOR_REPO_URL: https://bass.packages.cloudpassage.com/connector
+    CP_LINUX_DAEMON_VERSION: 4.1.1
+    CP_WINDOWS_DAEMON_VERSION: 4.1.0
+    CP_LINUX_CONNECTOR_DAEMON_VERSION: 4.1.1
+    CP_IMAGE_COLLECTOR_SERVICE_GRID_URL: https://containers.bass.cloudpassage.com
+    CP_ES_EVENTS_URL: http://es-events-bass.ng.cloudpassage.com:9200
+  vips:
+    api: api.bass.cloudpassage.com
+    grid: grid.bass.cloudpassage.com
+    portal: portal.bass.cloudpassage.com
+    containers: containers.bass.cloudpassage.com
+  kafka:
+    topic:
+      # Values must be valid JSON or it will not work!
+      reload_agent_group_state: '{ "partitions": 64, "config":[ "segment.bytes=1000000","retention.ms=3600000","delete.retention.ms=3600000" ], "replication-factor": 3 }'
+
+terraform_overrides:
+  TF_VAR_rds_backup_count: 30
+  TF_VAR_environment: "production"
+  # Setting the ssh public key used to create the stack so it will complete in jenkins
+  TF_VAR_ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4vXV8G7ryAttd306l74173PIDUlxMGKjlVao2aee6KS/RG7Z8bmAY3BrmS3nOwl+TDh6YoyKd3Z6+ax5vOcPg8GC10lxmsr54EVTudHY76SsC4ZtT7X6DClkg8ZbTZbbAa09kArUC0T4ToYR1NYIpVyzFnMIytBL62cDZlikAD93B5NC4CbYWEfvVLoJ4Pf2MCSowhoUtCXq1qwTtMFXM+30xYDS+AYUSu0NquA3el5egJ8Ujp5BkH2BqSiugOxF1007YZxktxTpQ417V2OYZF5Wa5ws1rCXa2QopWHJfvXqD77oPmSN7TkEWHekQI1/9MHoLoVl1C0b0coEQQgz5 brent@Brents-MacBook.2015"
+  TF_VAR_cass_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_elasticsearch_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_elasticsearch_ebs_size: 500
+  TF_VAR_elasticsearch_master_ebs_size: 50
+  TF_VAR_worker_slave_count: '{ us-west-2a=0, us-west-2b=0, us-west-2c=0 }'
+  TF_VAR_slave_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_public_slave_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_public_slave_total: 3
+  TF_VAR_kafka_count: '{us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_kafka_instance_type: "i3.large"
+  TF_VAR_kafka_ebs_size: 500
+  TF_VAR_kafka_heap: '2G'
+  TF_VAR_elasticsearch_instance_type: "m4.xlarge"
+  TF_VAR_elasticsearch_master_instance_type: "t2.medium"
+  TF_VAR_es_events_enable: 'true'
+  TF_VAR_cassandra_instance_type: "i3.xlarge"
+  TF_VAR_master_instance_type: "m3.2xlarge"
+  TF_VAR_public_slave_instance_type: "m4.xlarge"
+  TF_VAR_slave_instance_type: "c3.4xlarge"
+  TF_VAR_worker_slave_instance_type: "c3.4xlarge"
+  TF_VAR_rds: '{ multi_az=true, allocated_storage="3000", storage_type="gp2", apply_immediately=true, instance_type="db.t2.medium" }'
+  TF_VAR_rdskong: '{ multi_az=true, allocated_storage="20", storage_type="gp2", apply_immediately=true, instance_type="db.t2.medium" }'
+  TF_VAR_es_domain_instance_type: "m3.large.elasticsearch"
+  TF_VAR_es_domain_volume_size: 300
+  TF_VAR_cass_cluster_name: "bass cluster"
+  TF_VAR_cass_multiregion_enable: true
+  TF_VAR_cass_endpoint_snitch: org.apache.cassandra.locator.Ec2MultiRegionSnitch
+  TF_VAR_cass_internode_encryption: none
+  TF_VAR_cg_cassandra_location: "34.208.221.89/32,52.40.233.90/32,52.42.245.120/32,54.202.183.85/32"
+  TF_VAR_cass_suspended_processes: "Launch,Terminate,HealthCheck,ReplaceUnhealthy"
+  TF_VAR_worker_slave_spot_fleet_enable: true
+  TF_VAR_worker_slave_spot_fleet_target_capacity: 210
+  TF_VAR_rdsmetabase_enable: true
+  
+  # Change this value (doesn't matter what) to trigger a new spot fleet
+  # https://github.com/terraform-providers/terraform-provider-aws/issues/741
+  TF_VAR_worker_slave_spot_fleet_valid_until: "2022-12-22T22:22:23Z"
+  
+  # Reporting
+  TF_VAR_kafka_kinesis_topics: #csm_external_identifier_events,csm_finding_events,csm_policy_events,cve_base_metric_events,cve_entry_events,cve_exception_events,cve_vulnerable_software_events,group_events,issue_events,rule_events,scan_events,server_events,svm_finding_events,user_events
+  TF_VAR_emr_enable: 'false'
+  TF_VAR_kinesis_shard_default: 2
+  TF_VAR_kinesis_retention_period_default: 48
+  TF_VAR_rdsreporting: '{ multi_az=true, allocated_storage="100", storage_type="gp2", apply_immediately=true, instance_type="db.t2.medium" }'
+  TF_VAR_consistent_view_enable: true
+
+  # OPS-6436: Use ondemand for prod
+  TF_VAR_spot_pricing: '{ m3.medium="", m3.large="", m3.xlarge="", m3.2xlarge="", m4.xlarge="", c3.large="", c3.xlarge="", c3.2xlarge="", c3.4xlarge="", c3.8xlarge="", r3.large="", r3.xlarge="", r3.2xlarge="", r3.4xlarge="", r3.8xlarge="", i2.xlarge="", i2.2xlarge="",  i2.4xlarge="", i2.8xlarge="", d2.xlarge="", d2.2xlarge="", d2.4xlarge="", d2.8xlarge="" }'
+
+sni_overrides:
+  enabled: true
+
+report_scheduler:
+  secrets:
+    ninjas_api_key_id: AQICAHgwJGOJl9es7vP5Cf/84N5QlOGC6WD7QYzXN0JCmS7H4QHXrfN6L6rbnlzc81VuxQ8EAAAAZjBkBgkqhkiG9w0BBwagVzBVAgEAMFAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM16eC3IW9vggewvqFAgEQgCP/vmlsvJ0oTo48AplPqsDLf9V8cw6DASk76IDx9X9Ufd7mFA==
+    ninjas_api_key: AQICAHgwJGOJl9es7vP5Cf/84N5QlOGC6WD7QYzXN0JCmS7H4QGMTrgWPAuNsBH1cxx8LOGOAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMYB1ItsqfWTJtv7o3AgEQgDtv4vW20rDG9O1o28ltwOjINeIwbJ05QtxeAcezfj8lAPzFcN2hxMolCsCLZmAZ0Dl9iHUgeILQiOjl8w==
+
+event-indexer:
+  env:
+    CP_ELASTICSEARCH_HOSTS: "http://es-events-bass.ng.cloudpassage.com:9200"
+
+gridbot:
+  permissions:
+    'JenkinsBot:*':
+      allowusers:
+        alfonso:
+        vitaliy:
+        amansoor:
+        vaibhav:
+        theocummings:
+        kuga:
+        dilipangal:
+        wookie:
+        kishore:
+        joe:
+        vmanda:
+        dsrgyv:
+        abarkouski:
+        marsel.shiriyazdanov:
+        sasha:
+        aardestani:
+        akeller:
+        trobbins:
+        alim:
+        bcross:
+        dima:
+        j:
+        zvickery:
+        theo:
+        mandrus:
+    'help':
+      allowusers:
+        '#bass/*':

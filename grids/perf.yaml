@@ -1,0 +1,100 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    aadriasola@cloudpassage.com:
+    aardestani@cloudpassage.com:
+    abarkouski@cloudpassage.com:
+    abuhayeu@cloudpassage.com:
+    agupta@cloudpassage.com:
+    akeller@cloudpassage.com:
+    akuliashevich@cloudpassage.com:
+    akurhuzenkau@cloudpassage.com:
+    alim@cloudpassage.com:
+    alitskevich@cloudpassage.com:
+    aramamoorthy@cloudpassage.com:
+    badams@cloudpassage.com:
+    bkumar@cloudpassage.com:
+    bturner@cloudpassage.com:
+    cfinn@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    dbice@cloudpassage.com:
+    drajangam@cloudpassage.com:
+    dramaniuk@cloudpassage.com:
+    dsagarn@cloudpassage.com:
+    dterega@cloudpassage.com:
+    hlee@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+    iabukhouski@cloudpassage.com:
+    jcollier@cloudpassage.com:
+    jcordova@cloudpassage.com:
+    jlee@cloudpassage.com:
+    kgaurav@cloudpassage.com:
+    kjanakiraman@cloudpassage.com:
+    kuga@cloudpassage.com:
+    mkinsman@cloudpassage.com:
+    pehsani@cloudpassage.com:
+    rkumarg@cloudpassage.com:
+    rthomas@cloudpassage.com:
+    spyatrovich@cloudpassage.com:
+    sramanathan@cloudpassage.com:
+    talpert@cloudpassage.com:
+    tbengtson@cloudpassage.com:
+    tcummings@cloudpassage.com:
+    trobbins@cloudpassage.com:
+    vaher@cloudpassage.com:
+    vitaliy@cloudpassage.com:
+    vmanda@cloudpassage.com:
+    vmasakovski@cloudpassage.com:
+    zvickery@cloudpassage.com:
+    mandrus@cloudpassage.com:
+
+ninjas:
+  cassandra_keyspace: cloudpassage_perf
+  vips:
+    api: api-perf.cloudpassage.com
+    grid: grid-perf.cloudpassage.com
+    portal: portal-perf.cloudpassage.com
+  kafka:
+    topic:
+      # Values must be valid JSON or it will not work!
+      defaults:     '{ "partitions": 64, "config":[ "segment.bytes=5000000" ], "replication-factor": 3 }'
+      issues_index: '{ "partitions": 128, "config":[ "segment.bytes=5000000" ], "replication-factor": 3 }'
+
+kong:
+  REPORTING_API_EXTERNAL_WHITELIST: '166.78.105.97/32, 166.78.114.8/32, 10.0.0.0/8'
+
+terraform_overrides:
+  JENKINS: true
+  TF_VAR_environment: development
+  TF_VAR_cass_count: '{ us-west-2a=2, us-west-2b=2, us-west-2c=2 }'
+  TF_VAR_elasticsearch_count: '{us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_elasticsearch_master_count: '{us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_elasticsearch_ebs_size: 500
+  TF_VAR_worker_slave_count: '{ us-west-2a=4, us-west-2b=4, us-west-2c=4 }'
+  TF_VAR_slave_count: '{ us-west-2a=4, us-west-2b=4, us-west-2c=4 }'
+  TF_VAR_public_slave_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_public_slave_total: 3
+  TF_VAR_kafka_instance_type: 'm4.xlarge'
+  TF_VAR_master_instance_type: "m3.2xlarge"
+  TF_VAR_public_slave_instance_type: "m3.2xlarge"
+  TF_VAR_slave_instance_type: "r3.xlarge"
+  TF_VAR_worker_slave_instance_type: "r3.xlarge"
+  TF_VAR_rds: '{ allocated_storage="500" }'
+  TF_VAR_cass_cluster_name: "perf cluster"
+  TF_VAR_cass_multiregion_enable: true
+  TF_VAR_cass_endpoint_snitch: org.apache.cassandra.locator.Ec2MultiRegionSnitch
+  TF_VAR_cassandra_instance_type: 'r4.large'
+  TF_VAR_elasticsearch_instance_type: 'm3.large'
+  TF_VAR_emr_enable: 'true'
+  TF_VAR_emr_master_instance_type: 'r3.2xlarge'
+  TF_VAR_emr_core_instance_type: 'r3.2xlarge'
+gridbot:
+  permissions:
+    'JenkinsBot:*':
+      allowusers:
+        '#perf/*':
+    'help':
+      allowusers:
+        '#perf/*':

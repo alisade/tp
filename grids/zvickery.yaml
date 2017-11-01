@@ -1,0 +1,30 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    badams@cloudpassage.com:
+    akeller@cloudpassage.com:
+    zvickery@cloudpassage.com: 159.118.218.84
+    jcollier@cloudpassage.com:
+    trobbins@cloudpassage.com:
+    aardestani@cloudpassage.com:
+    alim@cloudpassage.com:
+    aadriasola@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+    dzmitrachonak@cloudpassage.com: 217.21.63.2
+    vmalyshka@cloudpassage.com: 86.57.236.190
+
+ninjas:
+  env:
+    WORKER_MAIL_INSTANT_ALERTS_MEM: 2048
+    WORKER_MAIL_DIGEST_ALERTS_MEM: 1024
+    WORKER_FIM_MEM: 16384
+    WORKER_SVA2_MEM: 1024
+    WORKER_SVA22_MEM: 2048
+    WORKER_USER_REQUESTS_SVA2_MEM: 1024
+    WORKER_USER_REQUESTS_SVA22_MEM: 1024
+    CP_POSTGRES_HOST: pgbouncer.marathon.mesos
+    CP_IMAGE_COLLECTOR_SERVICE_GRID_URL: https://containers.zvickery.cloudpassage.com
+#  vips:
+#    containers: containers.zvickery.cloudpassage.com

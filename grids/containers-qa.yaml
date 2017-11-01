@@ -1,0 +1,97 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    aadriasola@cloudpassage.com:
+    aardestani@cloudpassage.com:
+    abarkouski@cloudpassage.com:
+    abuhayeu@cloudpassage.com:
+    agupta@cloudpassage.com:
+    ahalenkova@cloudpassage.com:
+    akeller@cloudpassage.com:
+    akuliashevich@cloudpassage.com:
+    akurhuzenkau@cloudpassage.com:
+    alim@cloudpassage.com: 100.33.9.172
+    alitskevich@cloudpassage.com:
+    amansoor@cloudpassage.com:
+    aramamoorthy@cloudpassage.com:
+    awilson@cloudpassage.com:
+    badams@cloudpassage.com:
+    bkumar@cloudpassage.com:
+    bterry@cloudpassage.com:
+    bturner@cloudpassage.com:
+    cfinn@cloudpassage.com:
+    cturner@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    dbice@cloudpassage.com:
+    dchychmarou@cloudpassage.com:
+    dgindin@cloudpassage.com:
+    dmunjal@cloudpassage.com:
+    drajangam@cloudpassage.com:
+    dramaniuk@cloudpassage.com:
+    dromano@cloudpassage.com:
+    dsagarn@cloudpassage.com:
+    dterega@cloudpassage.com:
+    ebeuerlein@cloudpassage.com:
+    hlee@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+    iabukhouski@cloudpassage.com:
+    ibarysenka@cloudpassage.com:
+    iyurchanka@cloudpassage.com:
+    jcollier@cloudpassage.com:
+    jcordova@cloudpassage.com:
+    jetsten@cloudpassage.com:
+    jgibbons@cloudpassage.com:
+    jlancaster@cloudpassage.com:
+    jlee@cloudpassage.com:
+    jmontgomery@cloudpassage.com:
+    kgaurav@cloudpassage.com:
+    kjanakiraman@cloudpassage.com:
+    kuga@cloudpassage.com: 76.220.50.213
+    maklian@cloudpassage.com:
+    mgkrishnan@cloudpassage.com:
+    mkinsman@cloudpassage.com:
+    mshiriyazdanov@cloudpassage.com:
+    pbartruff@cloudpassage.com:
+    pehsani@cloudpassage.com:
+    pvaladzko@cloudpassage.com:
+    rkumarg@cloudpassage.com:
+    rjaldu@cloudpassage.com:
+    rthomas@cloudpassage.com:
+    sbarla@cloudpassage.com:
+    sherath@cloudpassage.com:
+    snicholson@cloudpassage.com:
+    spyatrovich@cloudpassage.com:
+    sramanathan@cloudpassage.com:
+    tbengtson@cloudpassage.com:
+    tcummings@cloudpassage.com:
+    vaher@cloudpassage.com:
+    vitaliy@cloudpassage.com:
+    vmanda@cloudpassage.com:
+    vmasakovski@cloudpassage.com:
+    zvickery@cloudpassage.com: 159.118.218.84
+    talpert@cloudpassage.com:
+    dzmitrachonak@cloudpassage.com: 45.62.123.18
+    tejaskumar@cloudpassage.com:
+    sjonnalagadda@cloudpassage.com:
+    kkuralik@cloudpassage.com:
+    afiodarau@cloudpassage.com:
+    vmalyshka@cloudpassage.com: 86.57.236.190
+
+terraform_overrides:
+  TF_VAR_environment: "development"
+  TF_VAR_emr_enable: "true"
+  TF_VAR_kinesis_events_enable: "true"
+  TF_VAR_worker_slave_count: '{ us-west-2a=10, us-west-2b=10, us-west-2c=10 }'
+  TF_VAR_slave_count: '{ us-west-2a=10, us-west-2b=10, us-west-2c=10 }'
+
+ninjas:
+  cassandra_ics_keyspace: ics_development
+  env:
+    CP_LINUX_DAEMON_VERSION: 4.1.1
+    CP_S3_AWS_FUGU_BUCKET: ng-fugu-blue
+    CP_FUGU_HOST: https://fugu-blue.cloudpassage.com
+    CP_ES_EVENTS_URL: http://elasticsearch-containers-qa.ng.cloudpassage.com:9200
+  fugu:
+    fugu_bucket_name: ng-fugu-blue

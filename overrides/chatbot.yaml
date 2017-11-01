@@ -1,0 +1,6 @@
+main:
+  BOT_ADMINS: "@aardestani,@akeller,@trobbins,@alim,@bcross,@dima,@j,@zvickery,@theo,@mandrus"
+  ACCESS_CONTROLS: "{'status': {'allowrooms': ('someroom@conference.localhost',)}}"
+  HIDE_RESTRICTED_COMMANDS: True
+secrets:
+  BOT_TOKEN: AQECAHhqHxhCOcCnC+fUq64r7pLXG8mCyQBVSglXV4nu+Z8z4wAAAIkwgYYGCSqGSIb3DQEHBqB5MHcCAQAwcgYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxmWmz8MRC34yX9QrYCARCARVR50EDUCsshGHwRv/97TCDyzT8bdKLA+lKHqOcTU1O106D6CU3+OSyFKatFYi36r/I5rydlSYo0rCicovfoo4YY9uaNow==

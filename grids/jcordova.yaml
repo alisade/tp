@@ -1,0 +1,17 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    badams@cloudpassage.com:
+    akeller@cloudpassage.com:
+    zvickery@cloudpassage.com:
+    jcollier@cloudpassage.com:
+    aardestani@cloudpassage.com:
+    aadriasola@cloudpassage.com:
+    jcordova@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+terraform_overrides:
+  TF_VAR_environment: "development"
+  TF_VAR_slave_count: '{ us-west-2a=5, us-west-2b=5, us-west-2c=5 }'

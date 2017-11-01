@@ -1,0 +1,8 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    bcross@cloudpassage.com:
+    badams@cloudpassage.com:
+    mandrus@cloudpassage.com:

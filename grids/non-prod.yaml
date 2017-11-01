@@ -1,0 +1,18 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    badams@cloudpassage.com:
+    akeller@cloudpassage.com:
+    zvickery@cloudpassage.com:
+    jcollier@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+gridbot:
+  permissions:
+    'JenkinsBot:*':
+      allowusers:
+        '#non-prod/*':
+    'help':
+      allowusers:
+        '#non-prod/*':

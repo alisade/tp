@@ -1,0 +1,88 @@
+
+admin_ips:
+  users:
+    aadriasola@cloudpassage.com:
+    aardestani@cloudpassage.com:
+    abarkouski@cloudpassage.com:
+    abuhayeu@cloudpassage.com:
+    agupta@cloudpassage.com:
+    ahalenkova@cloudpassage.com:
+    akeller@cloudpassage.com:
+    akuliashevich@cloudpassage.com:
+    akurhuzenkau@cloudpassage.com:
+    alim@cloudpassage.com: 100.33.9.172
+    alitskevich@cloudpassage.com:
+    amansoor@cloudpassage.com:
+    aramamoorthy@cloudpassage.com:
+    awilson@cloudpassage.com:
+    badams@cloudpassage.com:
+    bkumar@cloudpassage.com:
+    bterry@cloudpassage.com:
+    bturner@cloudpassage.com:
+    cfinn@cloudpassage.com:
+    cturner@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    dbice@cloudpassage.com:
+    dchychmarou@cloudpassage.com:
+    dgindin@cloudpassage.com:
+    dmunjal@cloudpassage.com:
+    drajangam@cloudpassage.com:
+    dramaniuk@cloudpassage.com:
+    dromano@cloudpassage.com:
+    dsagarn@cloudpassage.com:
+    dterega@cloudpassage.com:
+    ebeuerlein@cloudpassage.com:
+    hlee@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+    iabukhouski@cloudpassage.com:
+    ibarysenka@cloudpassage.com:
+    jcollier@cloudpassage.com:
+    jcordova@cloudpassage.com:
+    jetsten@cloudpassage.com:
+    jgibbons@cloudpassage.com:
+    jlancaster@cloudpassage.com:
+    jlee@cloudpassage.com:
+    jmontgomery@cloudpassage.com:
+    kgaurav@cloudpassage.com:
+    kjanakiraman@cloudpassage.com:
+    kuga@cloudpassage.com:
+    maklian@cloudpassage.com:
+    mkinsman@cloudpassage.com:
+    mshiriyazdanov@cloudpassage.com:
+    pbartruff@cloudpassage.com:
+    pehsani@cloudpassage.com:
+    rjaldu@cloudpassage.com:
+    rkumarg@cloudpassage.com:
+    rthomas@cloudpassage.com:
+    sherath@cloudpassage.com:
+    snicholson@cloudpassage.com:
+    spyatrovich@cloudpassage.com:
+    sramanathan@cloudpassage.com:
+    tbengtson@cloudpassage.com:
+    tcummings@cloudpassage.com:
+    vaher@cloudpassage.com:
+    vitaliy@cloudpassage.com:
+    vmanda@cloudpassage.com:
+    vmasakovski@cloudpassage.com:
+    zvickery@cloudpassage.com: 159.118.218.84
+    talpert@cloudpassage.com:
+    sbarla@cloudpassage.com:
+    sjonnalagadda@cloudpassage.com:
+    dzmitrachonak@cloudpassage.com: 45.62.123.18
+    vmalyshka@cloudpassage.com: 86.57.236.190
+
+terraform_overrides:
+  TF_VAR_environment: "development"
+  TF_VAR_emr_enable: "false"
+  TF_VAR_kinesis_events_enable: "false"
+
+ninjas:
+  cassandra_ics_keyspace: ics_development
+gridbot:
+  permissions:
+    'JenkinsBot:*':
+      allowusers:
+        '#epic-18929/*':
+    'help':
+      allowusers:
+        '#epic-18929/*':

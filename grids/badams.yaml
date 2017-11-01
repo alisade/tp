@@ -1,0 +1,14 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    badams@cloudpassage.com:
+    akeller@cloudpassage.com:
+    zvickery@cloudpassage.com:
+    jcollier@cloudpassage.com:
+    trobbins@cloudpassage.com:
+    aardestani@cloudpassage.com:
+    alim@cloudpassage.com:
+    aadriasola@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130

@@ -1,0 +1,149 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    akeller@cloudpassage.com: 76.89.164.115
+    zvickery@cloudpassage.com: 159.118.218.84
+    jcollier@cloudpassage.com: 173.92.26.196
+    aardestani@cloudpassage.com: 47.156.157.5
+    alim@cloudpassage.com: 100.33.9.172
+    talpert@cloudpassage.com: 34.208.62.171
+    apurva@cloudpassage.com:
+    aadriasola@cloudpassage.com: 69.42.13.203
+    vitaliy@cloudpassage.com: 71.94.73.141
+    trobbins@cloudpassage.com: 67.169.108.148
+    bcross@cloudpassage.com:
+    mandrus@cloudpassage.com: 68.99.32.87
+    badams@cloudpassage.com:
+    dzmitrachonak@cloudpassage.com: 45.62.123.18
+    vmalyshka@cloudpassage.com: 86.57.236.190
+    jcordova@cloudpassage.com:
+    qa-ec2-docker: 54.241.27.184
+    amansoor@cloudpassage.com:
+    vaher@cloudpassage.com:
+    tcummings@cloudpassage.com:
+    kuga@cloudpassage.com:
+    dangal@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    kjanakiraman@cloudpassage.com:
+    vmanda@cloudpassage.com:
+    spyatrovich@cloudpassage.com:
+    abarkouski@cloudpassage.com:
+    mshiriyazdanov@cloudpassage.com:
+    abuhayeu@cloudpassage.com:
+
+3rdparty:
+  new_relic_license_key: dc7d9326185261dc8f38bdbd11db15749dc9427b
+  datadog_api_key: 6d3fccd2292fa567e2e335dbf09a3caa
+  airbrake_project_key: 1a92e69dfd661dcd0c93af2fa7219083
+  airbrake_project_id: 143730
+
+ninjas:
+  repo_url: https://cpg.packages.cloudpassage.com
+  env:
+    CP_POSTGRES_HOST: pgbouncer.marathon.mesos
+    API_CPUS: 0.5
+    PORTAL_CPUS: 0.5
+    GRID_CPUS: 0.5
+    AGENT_EVENTS_COLLECTOR_CPUS: 0.5
+    AGENT_EVENTS_ROUTER_CPUS: 0.5
+    CP_S3_AWS_FUGU_BUCKET: ng-fugu-blue
+    CP_FUGU_HOST: https://fugu-blue.cloudpassage.com
+    CP_REPO_URL: https://cpg.packages.cloudpassage.com
+    CP_CONNECTOR_REPO_URL: https://cpg.packages.cloudpassage.com/connector
+    CP_LINUX_DAEMON_VERSION: 4.1.1
+    CP_WINDOWS_DAEMON_VERSION: 4.1.0
+    CP_LINUX_CONNECTOR_DAEMON_VERSION: 4.1.1
+    CP_ES_EVENTS_URL: http://es-events-cpg.ng.cloudpassage.com:9200
+
+kong:
+  REPORTING_API_EXTERNAL_WHITELIST: '10.0.0.0/8'
+
+event-indexer:
+  env:
+    CP_ELASTICSEARCH_HOSTS: "http://es-events-cpg.ng.cloudpassage.com:9200"
+
+terraform_overrides:
+  TF_VAR_rds_backup_count: 30
+  TF_VAR_environment: "production"
+  TF_VAR_cass_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_elasticsearch_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_worker_slave_count: '{ us-west-2a=0, us-west-2b=0, us-west-2c=0 }'
+  TF_VAR_slave_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_public_slave_count: '{ us-west-2a=1, us-west-2b=1, us-west-2c=1 }'
+  TF_VAR_public_slave_total: 3
+  TF_VAR_kafka_instance_type: "m4.xlarge"
+  TF_VAR_elasticsearch_instance_type: "m4.large"
+  TF_VAR_elasticsearch_master_instance_type: "t2.medium"
+  TF_VAR_es_events_enable: 'true'
+  TF_VAR_cassandra_instance_type: "i2.xlarge"
+  TF_VAR_master_instance_type: "m3.2xlarge"
+  TF_VAR_public_slave_instance_type: "m4.xlarge"
+  TF_VAR_slave_instance_type: "c3.4xlarge"
+  TF_VAR_worker_slave_instance_type: "c3.4xlarge"
+  TF_VAR_worker_slave_spot_fleet_valid_until: "2022-12-22T22:22:23Z"
+  TF_VAR_es_domain_volume_size: '300'
+  TF_VAR_es_domain_instance_type: 'm3.medium.elasticsearch'
+  TF_VAR_cassandra_ebs_size: '3000'
+  TF_VAR_rdskong: '{ instance_type="db.t2.medium", storage_type="gp2" }'
+  TF_VAR_rds: '{ multi_az=true, allocated_storage="3000", apply_immediately=true, instance_type="db.t2.medium", storage_type="gp2" }'
+  TF_VAR_halo_daemon_grid_url: "https://grid.cloudpassage.com/grid"
+  TF_VAR_worker_slave_spot_fleet_enable: true
+  TF_VAR_worker_slave_spot_fleet_target_capacity: 100
+  TF_VAR_rdsmetabase_enable: true
+
+  # High Density Worker Slaves
+  TF_VAR_enable_high_density_workers: true
+  TF_VAR_worker_slave_high_density_count: 1
+  TF_VAR_worker_slave_high_density_instance_type: c4.large
+
+  # Disabling
+  TF_VAR_emr_enable: 'false'
+  TF_VAR_rdsreporting: '{ instance_type="db.t2.medium", storage_type="gp2" }'
+  TF_VAR_kafka_kinesis_topics: csm_external_identifier_events,csm_finding_events,csm_policy_events,cve_base_metric_events,cve_entry_events,cve_exception_events,cve_vulnerable_software_events,group_events,issue_events,rule_events,scan_events,server_events,svm_finding_events,user_events
+  TF_VAR_consistent_view_enable: true
+
+  # OPS-6436: Use ondemand for prod
+  TF_VAR_spot_pricing: '{ m3.medium="", m3.large="", m3.xlarge="", m3.2xlarge="", m4.xlarge="", c3.large="", c3.xlarge="", c3.2xlarge="", c3.4xlarge="", c3.8xlarge="", r3.large="", r3.xlarge="", r3.2xlarge="", r3.4xlarge="", r3.8xlarge="", i2.xlarge="", i2.2xlarge="",  i2.4xlarge="", i2.8xlarge="", d2.xlarge="", d2.2xlarge="", d2.4xlarge="", d2.8xlarge="" }'
+
+  terraform_overrides_secret:
+    us-west-2:
+      TF_VAR_halo_daemon_key: 'AQECAHh1w/arXCYocUJ2fAaqbyvsHkmcwqdwgABeh8H4NGm44gAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDGlWWQ3ArYHiTAJFXgIBEIA7CVhaY64Kfner2cWYUv/6o+klJQAjY/wli+vowq4zHETIbAZG3E5DzC3QXSAjeyFlD0hTZmEDyRpUiBg='
+
+report_scheduler:
+  secrets:
+    ninjas_api_key_id: AQECAHhOifP8WyJYzU13nPetppyGkkrtvb5B6RmucHf/exskfQAAAGYwZAYJKoZIhvcNAQcGoFcwVQIBADBQBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDLMON+u3D6sQB5VpigIBEIAjqk0Bhe71e5TY/EBfmklNw+EdYSRy6YOKMURQdFcHmXGmC+k=
+    ninjas_api_key: AQECAHhOifP8WyJYzU13nPetppyGkkrtvb5B6RmucHf/exskfQAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDGdtQKTCsJo7wPLuBwIBEIA7fhjpDjzqeWjd3gYYUCCWjfykjhmifbOwmznj0uRvFt11fAE2C7w5c9O1EU85/fiCx57dBi1KZN3o7lA=
+gridbot:
+  permissions:
+    'JenkinsBot:*':
+      allowusers:
+        alfonso:
+        vitaliy:
+        amansoor:
+        vaibhav:
+        theocummings:
+        kuga:
+        dilipangal:
+        wookie:
+        kishore:
+        joe:
+        vmanda:
+        dsrgyv:
+        abarkouski:
+        marsel.shiriyazdanov:
+        sasha:
+        aardestani:
+        akeller:
+        trobbins:
+        alim:
+        bcross:
+        dima:
+        j:
+        zvickery:
+        theo:
+        mandrus:
+    'help':
+      allowusers:
+        '#cpg/*':

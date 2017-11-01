@@ -1,0 +1,19 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    talpert@cloudpassage.com:
+    badams@cloudpassage.com:
+    akeller@cloudpassage.com:
+    zvickery@cloudpassage.com: 159.118.218.84
+    jcollier@cloudpassage.com:
+    trobbins@cloudpassage.com:
+    aardestani@cloudpassage.com:
+    alim@cloudpassage.com:
+    aadriasola@cloudpassage.com:
+    dzmitrachonak@cloudpassage.com: 45.62.123.18
+    hq@cloudpassage.com: 64.124.161.130
+    vmalyshka@cloudpassage.com: 86.57.236.190
+keyman:
+  "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA13mD7a32a9nzyOxpyM8vA5B7cKUh4So5kSL8E5w75okGUQoyHum/cBypr5hjen5YObx+9Yp4n4kOW8EU0uiPgfLbimNJiq+ZEjZp2qVqzPDLizP1xbLIcLk2sF1iqOvpbnr7w4Px0YfsbD34huzKd/Ja57CsFNA0IkWe4dlpTrZVCTGSI1K84eSIaoEaFaPZfq+tMwEghnAoEXtvXO5BhB1HRf613Q336A/+BIGIdcJIS+c7kUbRG67NuHByOEm2Y33xCd5UPqu8tpeP248Y8nAtQwBJbllqG+jEU+scQ+i4H5t6Df/NW1Xd/c3Ie7dbbfvXnieBN/uNKyhDA+Bnww== stranger@epbyminw0654t1":

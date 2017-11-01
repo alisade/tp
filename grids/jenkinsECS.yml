@@ -1,0 +1,50 @@
+---
+git2consul:
+  git2consul_status: good
+admin_ips:
+  users:
+    aadriasola@cloudpassage.com:
+    aardestani@cloudpassage.com:
+    abarkouski@cloudpassage.com:
+    abuhayeu@cloudpassage.com:
+    akeller@cloudpassage.com:
+    alim@cloudpassage.com:
+    amansoor@cloudpassage.com:
+    apurva@cloudpassage.com:
+    aramamoorthy@cloudpassage.com:
+    asingh@cloudpassage.com:
+    badams@cloudpassage.com:
+    bcross@cloudpassage.com:
+    bturner@cloudpassage.com:
+    cwardall@cloudpassage.com:
+    devgit@cloudpassage.com: 192.237.169.148
+    drajangam@cloudpassage.com:
+    dramaniuk@cloudpassage.com:
+    dterega@cloudpassage.com:
+    dzmitrachonak@cloudpassage.com:
+    ebeuerlein@cloudpassage.com:
+    hlee@cloudpassage.com:
+    hq@cloudpassage.com: 64.124.161.130
+    ibarysenka@cloudpassage.com:
+    iabukhouski@cloudpassage.com:
+    iyurchanka@cloudpassage.com:
+    jcollier@cloudpassage.com:
+    jcordova@cloudpassage.com:
+    jlee@cloudpassage.com:
+    kuga@cloudpassage.com:
+    kjanakiraman@cloudpassage.com:
+    mandrus@cloudpassage.com:
+    nkrishnan@cloudpassage.com:
+    pvaladzko@cloudpassage.com:
+    spyatrovich@cloudpassage.com:
+    sramanathan@cloudpassage.com:
+    sramnani@cloudpassage.com:
+    sbarla@cloudpassage.com:
+    talpert@cloudpassage.com:
+    tcummings@cloudpassage.com:
+    trobbins@cloudpassage.com:
+    vaher@cloudpassage.com:
+    vitaliy:
+    vmalyshka@cloudpassage.com:
+    vmasakovski@cloudpassage.com:
+    zvickery@cloudpassage.com:

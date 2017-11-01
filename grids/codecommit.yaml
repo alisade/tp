@@ -1,0 +1,17 @@
+---
+accounts:
+  856192027328:
+    domain: 'ng.cloudpassage.com'
+    ssh_id: 'APKAJZ6PMH7PEXLIH3TA'
+    region: 'us-west-2'
+    cc_url: 'ssh://APKAJZ6PMH7PEXLIH3TA@git-codecommit.us-west-2.amazonaws.com:22/v1/repos'
+  385356239175:
+    domain: 'c1oudpassage.com'
+    ssh_id: 'APKAIIPAMCMGXT4IA2OQ'
+    region: 'us-east-2'
+    cc_url: 'ssh://APKAIIPAMCMGXT4IA2OQ@git-codecommit.us-east-2.amazonaws.com:22/v1/repos'
+  232981490179:
+    domain: 'vpg.cloudpassage.com'
+    ssh_id: 'APKAIJ3U2WERKAKSLOMA'
+    region: 'us-west-2'
+    cc_url: 'ssh://APKAIJ3U2WERKAKSLOMA@git-codecommit.us-west-2.amazonaws.com:22/v1/repos'
