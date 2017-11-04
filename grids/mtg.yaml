@@ -3,6 +3,7 @@ git2consul:
   git2consul_status: good
 admin_ips:
   users:
+  users:
     akeller@cloudpassage.com: 76.89.164.115
     akellervpn@cloudpassage.com: 173.244.48.100
     zvickery@cloudpassage.com: 159.118.218.84
