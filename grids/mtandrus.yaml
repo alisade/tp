@@ -1,8 +1,0 @@
----
-git2consul:
-  git2consul_status: good
-admin_ips:
-  users:
-    mandrus@cloudpassage.com:
-    bcross@cloudpassage.com:
-    hq@cloudpassage.com: 64.124.161.130
